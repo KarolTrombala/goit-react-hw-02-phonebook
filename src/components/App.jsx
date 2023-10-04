@@ -16,15 +16,17 @@ export class App extends Component {
   };
 
   addContact = (name, number) => {
+    const { contacts } = this.state;
+    const contactNames = contacts.map(contact => {
+      return contact.name;
+    });
+
+    if (contactNames.includes(name))
+      return 
+          console.log (alert(`${name} is alredy in contacts`));
+
     this.setState(prevState => ({
-      contacts: [
-        ...prevState.contacts,
-        {
-          id: nanoid(),
-          name,
-          number,
-        },
-      ],
+      contacts: [...prevState.contacts, { id: nanoid(), name, number }],
     }));
   };
 
