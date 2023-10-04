@@ -4,7 +4,6 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
 
-
 export class App extends Component {
   state = {
     contacts: [
@@ -50,19 +49,19 @@ export class App extends Component {
     });
   };
 
-render() {
-  return (
-    <div
-      style={{
-        marginTop: 100,
-        marginLeft: 100,
-        height: '100vh',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 20,
-        color: '#010101'
-      }}
-    >
+  render() {
+    return (
+      <div
+        style={{
+          marginTop: 100,
+          marginLeft: 100,
+          height: '100vh',
+          justifyContent: 'center',
+          alignItems: 'center',
+          fontSize: 20,
+          color: '#010101',
+        }}
+      >
         <h1>Phonebook</h1>
         <ContactForm onSubmit={this.addContact} />
 
@@ -73,6 +72,6 @@ render() {
           onClick={this.deleteContact}
         />
       </div>
-  );
- }
+    );
+  }
 }
