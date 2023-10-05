@@ -25,7 +25,7 @@ export class ContactForm extends Component {
 
     return (
       <div>
-        <form className={css.form}>
+        <form className={css.form} onSubmit={this.handleSubmit}>
           <label className={css.label}>
             Name
             <input
