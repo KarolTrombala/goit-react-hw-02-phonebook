@@ -21,9 +21,11 @@ export class App extends Component {
       return contact.name;
     });
 
-    if (contactNames.includes(name))
-      return 
-          console.log (alert(`${name} is alredy in contacts`));
+    if (contactNames.includes(name)) {
+      alert(`${name} is already in contacts`)
+    }
+      // return 
+      //     console.log (alert(`${name} is alredy in contacts`));
 
     this.setState(prevState => ({
       contacts: [...prevState.contacts, { id: nanoid(), name, number }],
